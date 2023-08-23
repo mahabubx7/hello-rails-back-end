@@ -23,7 +23,8 @@ default: &default
 
 development:
   <<: *default
-  database: hello_rails_back_end_development
+  database: hello_rails_back_end_dev
+  url: <%= ENV["DATABASE_URL"] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +59,7 @@ development:
 test:
   <<: *default
   database: hello_rails_back_end_test
+  url: <%= ENV["DATABASE_URL"] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +84,6 @@ test:
 production:
   <<: *default
   database: hello_rails_back_end_production
-  username: hello_rails_back_end
-  password: <%= ENV["HELLO_RAILS_BACK_END_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  # username: hello_rails_back_end
+  # password: <%= ENV["HELLO_RAILS_BACK_END_DATABASE_PASSWORD"] %>
