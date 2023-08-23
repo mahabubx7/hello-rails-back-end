@@ -32,6 +32,8 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
+[Frontend repository](https://github.com/mahabubx7/hello-rails-front-end)
+
 <details>
   <summary>Server</summary>
   <ul>
